@@ -1,4 +1,4 @@
-class CallController
+class CallController < ApplicationController
   def initialize(event)
     @event = event
   end
@@ -6,7 +6,7 @@ class CallController
   def process
     # all of your application-specific code here - creating models,
     # processing reports, etc
-    puts @event.inspect
+    ActionCable.server.broadcast "everybody", { from: @event.from, to: @event.to }
     return SipgateIo::XmlResponse.hangup
   end
 end

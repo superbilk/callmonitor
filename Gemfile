@@ -48,6 +48,7 @@ group :development do
   gem 'guard-rails'
   gem 'guard-bundler'
   gem 'growl'
+  gem 'quiet_assets'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
