@@ -1,4 +1,4 @@
-App.call = App.cable.subscriptions.create "CallChannel",
+App.new_call = App.new_call.subscriptions.create "NewCallChannel",
   connected: ->
     # Called when the subscription is ready for use on the server
 
